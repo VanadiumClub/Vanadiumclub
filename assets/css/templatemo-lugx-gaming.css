@@ -175,107 +175,6 @@ body {
   color: #fff;
 }
 
-/* 
----------------------------------------------
-Pre-loader Style
---------------------------------------------- 
-*/
-
-.js-preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.99);
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9999;
-  -webkit-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease;
-}
-
-.js-preloader.loaded {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-@-webkit-keyframes dot {
-  50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
-  }
-}
-
-@keyframes dot {
-  50% {
-      -webkit-transform: translateX(96px);
-      transform: translateX(96px);
-  }
-}
-
-@-webkit-keyframes dots {
-  50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
-  }
-}
-
-@keyframes dots {
-  50% {
-      -webkit-transform: translateX(-31px);
-      transform: translateX(-31px);
-  }
-}
-
-.preloader-inner {
-  position: relative;
-  width: 142px;
-  height: 40px;
-  background: transparent;
-}
-
-.preloader-inner .dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 12px;
-  left: 15px;
-  background: #0071f8;
-  border-radius: 50%;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-animation: dot 2.8s infinite;
-  animation: dot 2.8s infinite;
-}
-
-.preloader-inner .dots {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  margin-top: 12px;
-  margin-left: 31px;
-  -webkit-animation: dots 2.8s infinite;
-  animation: dots 2.8s infinite;
-}
-
-.preloader-inner .dots span {
-  display: block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  margin-left: 16px;
-  background: #0071f8;
-  border-radius: 50%;
-}
-
-
 
 /* 
 ---------------------------------------------
@@ -297,7 +196,6 @@ Header Style
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
 }
-
 .background-header .logo img {
   max-width: 110px;
 }
@@ -548,7 +446,7 @@ Header Style
     font-weight: 400;
     color: #1e1e1e;
     background-color: #fff;
-     border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px 25px 25px;
   }
   .background-header .main-nav .nav li,
   .header-area .main-nav .nav li {
@@ -639,7 +537,9 @@ Header Style
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  
+  .header-area .nav p {
+    font-size: 4vh;
+  }
 }
 
 /* 
@@ -666,7 +566,7 @@ Banner Style
 }
 
 .main-banner .caption h2 {
-  font-size: 48px;
+  font-size: 9.5vh;
   color: #fff;
   margin-top: 20px;
   position: relative;
@@ -680,7 +580,7 @@ Banner Style
   width: 202px;
   height: 12px;
   content: '';
-  left: 125px;
+  left: 50%;
   bottom: 0;
 }
 
@@ -1054,6 +954,13 @@ body {
   .footer{
     border-radius: 0px 0px 0px 0px;
   }
+  .header-area .nav p {
+    font-size: 4vh;
+  }
+  .main-banner .caption h2:after {
+    z-index: -2;
+  }
+  
 }
 
 @media (max-width: 992px) {
@@ -1126,6 +1033,9 @@ body {
     width: 100%;
     margin-left: 0vh;
     }
+  .main-banner .caption .vanadiumtext {
+    font-size: 8vh; /* Adjust this value as needed for smaller devices */
+  }
 }
 
 
