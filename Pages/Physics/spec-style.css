@@ -1,0 +1,330 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato';
+  background-color: #131313;
+  text-decoration: none;
+
+}
+
+.hcontainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 45vh; 
+  width: 100%; 
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.hcontainer::before {
+  content: '';
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-image: url('Physics-spec-bgimg.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  z-index: 1;
+}
+
+.hcontainer p {
+  position: relative;
+  z-index: 2;
+  font-size: 10vh;
+  position: relative;
+  text-align: center;
+}
+
+
+.accordion dl,
+.accordion-list {
+  border: 1px solid #131313;
+}
+.accordion dl:after,
+.accordion-list:after {
+  content: "";
+  display: block;
+  height: 1em;
+  position: center;
+  background-color: #095e80;
+}
+
+.accordion dd,
+.accordion__panel {
+  background-color: #fff;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.accordion p {
+  padding: 1em 2em 1em 2em;
+  color: #131313;
+  text-decoration: none;
+}
+
+
+.accordion {
+  position: relative;
+  background-color: #131313;
+}
+
+.head-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 0 2em 0;
+}
+
+.accordionTitle,
+.accordion__Heading {
+  background-color: #119ed5;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4vh;
+  padding: 2em;
+  align-items: center;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+.accordionTitle:before,
+.accordion__Heading:before {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.accordionTitle:hover,
+.accordion__Heading:hover {
+  background-color: #ed4036;
+}
+
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+  background-color: #119ed5;
+}
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+.modules{
+  justify-content: center;
+  font-size: 3vh;
+  text-decoration: none;
+}
+.accordion dd,
+.accordion__panel {
+  background-color: #fff;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: center;
+  overflow: hidden; 
+}
+
+
+.accordion dd {
+  position: relative;
+  margin: 0; 
+  padding: 0;
+}
+
+.accordion dl {
+  margin: 0;
+  padding: 0;
+}
+
+.accordionItem {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+}
+
+.accordionItem.is-expanded {
+  max-height: 100vh;
+  overflow: visible; 
+}
+
+.accordion dd dl {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.accordion dd dl .accordionTitle {
+  font-size: 2.5vh; 
+  padding: 1em; 
+}
+
+.accordion dd dl .accordionItem {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+.accordion dd dl .accordionItem.is-expanded {
+  max-height: fit-content;
+}
+
+.accordion dd dl .accordionTitle.is-expanded:before {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+}
+
+
+.container {
+  position: relative; 
+  z-index: 0;
+}
+
+.accordion dd {
+  z-index: 1; 
+}
+p.semesters{
+  font-size: 4vh;
+  color: #119ed5;
+}
+p.specialty{
+  font-size: 5vh;
+  color: #ed4036;
+}
+a.modules {
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 0;
+  color: inherit;
+}
+
+a.modules:hover {
+  color: #119ed5;
+  text-decoration: underline;
+}
+
+.myButton {
+  padding: 10px 20px;
+  margin-top: 5vh;
+  font-size: 16px;
+  background-color: #119ed5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust this value to place the button higher or lower */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the button */
+  z-index: 10;
+}
+
+.myButton:hover {
+  background-color: #ed4036 ;
+}
+
+
+
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 15em;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+}
+
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+  align-items: center;
+}
+
+.animateIn {
+  -webkit-animation: accordionIn 0.45s normal ease-in-out both 1;
+          animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+
+.animateOut {
+  -webkit-animation: accordionOut 0.45s alternate ease-in-out both 1;
+          animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+
+@-webkit-keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9) rotateX(-60deg);
+            transform: scale(0.9) rotateX(-60deg);
+  }
+}
