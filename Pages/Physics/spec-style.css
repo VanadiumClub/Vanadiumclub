@@ -236,7 +236,7 @@ a.modules:hover {
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  top: 10px; /* Adjust this value to place the button higher or lower */
+  top: 10px; 
   left: 50%;
   transform: translateX(-50%); /* Centers the button */
   z-index: 10;
@@ -253,6 +253,9 @@ a.modules:hover {
     max-height: 15em;
     -webkit-transition: max-height 0.5s;
     transition: max-height 0.5s;
+  }
+  .myButton{
+    font-size: 5vh;
   }
 }
 
