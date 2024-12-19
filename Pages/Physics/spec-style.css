@@ -274,7 +274,14 @@ a.modules:hover {
   -webkit-animation: accordionOut 0.45s alternate ease-in-out both 1;
           animation: accordionOut 0.45s alternate ease-in-out both 1;
 }
-
+p.semesters{
+  font-size: 2vh;
+  color: #119ed5;
+}
+p.specialty{
+  font-size: 3vh;
+  color: #ed4036;
+}
 @-webkit-keyframes accordionIn {
   0% {
     opacity: 0;
